@@ -7,6 +7,7 @@ import requests
 import configparser
 import sys
 import codecs
+import pprint
 
 args = sys.argv
 
@@ -23,5 +24,5 @@ root = lxml.html.fromstring(target_html)
 value = root.cssselect("body")[0].text_content()
 #value = root.cssselect("table.calendar > tbody > tr:nth-child(2) > td:nth-child(3)")[0].text_content()
 #value = root.cssselect("body > table.calendar > tbody > tr:nth-child(2) > td:nth-child(3)")[0].text_content()
-print(value)
+pprint.pprint(value)
 
